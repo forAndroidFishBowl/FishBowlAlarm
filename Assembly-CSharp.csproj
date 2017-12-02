@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{B2B58FB2-4462-6B0C-A872-40DD957E5FE0}</ProjectGuid>
+    <ProjectGuid>{3EDB5679-1765-FD97-C11D-D9BD44D35BD5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -51,11 +51,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\FishFunction.cs" />
-     <Compile Include="Assets\GameFunction.cs" />
-     <Compile Include="Assets\MoveFunction1.cs" />
+     <Compile Include="Assets\Scripts\ButttonClick_SHOP.cs" />
+     <Compile Include="Assets\Scripts\FishFunction.cs" />
+     <Compile Include="Assets\Scripts\GameFunction.cs" />
+     <Compile Include="Assets\Scripts\MoveFunction1.cs" />
  <Reference Include="Facebook.Unity.Settings">
- <HintPath>D:/UnityProjects/New Unity Project/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
+ <HintPath>D:/GitHub/FishBowlAlarm/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Analytics">
  <HintPath>C:/Users/陳彥佑/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.analytics@1.0.1/UnityEngine.Analytics.dll</HintPath>
