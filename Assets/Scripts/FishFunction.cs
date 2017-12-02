@@ -48,28 +48,28 @@ public class FishFunction : MonoBehaviour {
             switch (direction)
             {
                 case 0:
-                    gameObject.transform.position += new Vector3(0.1f, 0, 0);
+                    gameObject.transform.position += new Vector3(0.01f, 0, 0);
                     break;
                 case 1:
-                    gameObject.transform.position += new Vector3(-0.1f, 0, 0);
+                    gameObject.transform.position += new Vector3(-0.01f, 0, 0);
                     break;
                 case 2:
-                    gameObject.transform.position += new Vector3(0, 0.1f, 0);
+                    gameObject.transform.position += new Vector3(0, 0.01f, 0);
                     break;
                 case 3:
-                    gameObject.transform.position += new Vector3(0, -0.1f, 0);
+                    gameObject.transform.position += new Vector3(0, -0.01f, 0);
                     break;
                 case 4:
-                    gameObject.transform.position += new Vector3(0.1f, 0.1f, 0);
+                    gameObject.transform.position += new Vector3(0.01f, 0.01f, 0);
                     break;
                 case 5:
-                    gameObject.transform.position += new Vector3(-0.1f, 0.1f, 0);
+                    gameObject.transform.position += new Vector3(-0.01f, 0.01f, 0);
                     break;
                 case 6:
-                    gameObject.transform.position += new Vector3(0.1f, -0.1f, 0);
+                    gameObject.transform.position += new Vector3(0.01f, -0.01f, 0);
                     break;
                 case 7:
-                    gameObject.transform.position += new Vector3(-0.1f, -0.1f, 0);
+                    gameObject.transform.position += new Vector3(-0.01f, -0.01f, 0);
                     break;
             }
         }
