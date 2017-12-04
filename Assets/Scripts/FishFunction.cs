@@ -8,7 +8,6 @@ public class FishFunction : MonoBehaviour {
     int timeCounter = 0;
     int direction = 0;
     System.Random prandom = new System.Random();
-    // Use this for initialization
     void Start () {
         direction = getNextDirection();
 	}
@@ -18,29 +17,7 @@ public class FishFunction : MonoBehaviour {
         return prandom.Next(8);
     }
 
-    // Update is called once per frame
     void Update() {
-        /*
-        time += Time.deltaTime;
-        if (time > 1f)
-        {
-             int fishmove=0;
-            if(time > 1.5f)fishmove = Random.Range(1, 3);
-
-            switch (fishmove)
-            {
-                case 1:
-                        gameObject.transform.position -= new Vector3(0.1f, 0, 0);
-                    break;
-                case 2:
-                    gameObject.transform.position += new Vector3(0.1f, 0, 0);
-                    break;
-                default:
-                    break;
-            }
-           if (time > 3f) time = 0.5f;
-        }
-        */
 
         if(time < 3f)
         {
