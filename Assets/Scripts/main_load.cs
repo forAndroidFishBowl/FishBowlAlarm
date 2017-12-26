@@ -25,6 +25,6 @@ public class main_load : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+        
 	}
 }

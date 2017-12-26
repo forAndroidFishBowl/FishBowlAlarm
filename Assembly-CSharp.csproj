@@ -53,6 +53,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\ButttonClick_SHOP.cs" />
      <Compile Include="Assets\Scripts\BuyFish01.cs" />
+     <Compile Include="Assets\Scripts\BuyFish02.cs" />
      <Compile Include="Assets\Scripts\ChangeScene.cs" />
      <Compile Include="Assets\Scripts\FishFunction.cs" />
      <Compile Include="Assets\Scripts\GameFunction.cs" />
@@ -92,14 +93,14 @@
  <Reference Include="UnityEngine.SpatialTracking">
  <HintPath>D:/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
  </Reference>
+ <Reference Include="LitJson">
+ <HintPath>D:/GitHub/FishBowlAlarm/Assets/Scripts/LitJson.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEngine.Analytics">
  <HintPath>C:/Users/陳彥佑/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.analytics@1.0.1/UnityEngine.Analytics.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Purchasing">
  <HintPath>C:/Users/陳彥佑/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.purchasing@1.0.1/UnityEngine.Purchasing.dll</HintPath>
- </Reference>
- <Reference Include="LitJson">
- <HintPath>D:/GitHub/FishBowlAlarm/Assets/Scripts/LitJson.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
