@@ -2,25 +2,53 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Text.RegularExpressions;
+using System.Globalization;
 
 public class Clock : MonoBehaviour {
     public string nowTimeHour;
     public string nowTimeMinute;
-    private string[] hour = { "0", "1", "2", "3", "4", "5" };
+    public string saveTimeHour;
+    public string saveTimeMinute;
+    public string inputHour;
+    public string inputMinute;
+
     private void OnGUI()
     {
         Rect rect1 = new Rect(0.0f, 0.0f, 200.0f, 100.0f);
         Rect rect2 = new Rect(200.0f, 0.0f, 200.0f,100.0f);
+        Rect rect3 = new Rect(0.0f, 100.0f, 30.0f, 30.0f);
         GUIStyle font = new GUIStyle();
         GUIStyle font2 = new GUIStyle();
         font.fontSize = 60;
         font2.fontSize = 20;
+
         GUI.Label(rect1, nowTimeHour + ":" + nowTimeMinute, font);
 
+        inputHour = Regex.Replace(inputHour, "[^0-9]", "");
+        inputMinute = Regex.Replace(inputMinute, "[^0-9]", "");
+ 
+        GUI.Label(rect3, "設定鬧鐘時間 ",font2);
+        inputHour = GUI.TextField(new Rect(130, 100, 30, 30), inputHour, 2);
+        GUI.Label(new Rect(160, 100, 30, 30), "  : ", font2);
+        inputMinute = GUI.TextField(new Rect(190, 100, 30, 30), inputMinute, 2);
+        GUI.Label(new Rect(0, 200, 200,100), "鬧鐘時間 " + saveTimeHour + " : " + saveTimeMinute,font2);
 
+        if (GUI.Button(new Rect(50,150,50,50),"確認"))
+        {
+            saveTimeHour = inputHour;
+            saveTimeMinute = inputMinute;
+        }
     }
 
-
+    void Checkclock()
+    {
+        if ((nowTimeHour == saveTimeHour) && (nowTimeMinute == saveTimeMinute))
+        {
+            Alarm();
+            saveTimeHour = saveTimeMinute = null;
+        }
+    }
 
     void Alarm()
     {
@@ -39,5 +67,6 @@ public class Clock : MonoBehaviour {
             nowTimeMinute = "0" + System.DateTime.Now.Minute.ToString();
         else
             nowTimeMinute = System.DateTime.Now.Minute.ToString();
+        Checkclock();
     }
 }
