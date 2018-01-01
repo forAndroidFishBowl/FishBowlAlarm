@@ -51,11 +51,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\ButttonClick_SHOP.cs" />
      <Compile Include="Assets\Scripts\BuyFish01.cs" />
      <Compile Include="Assets\Scripts\BuyFish02.cs" />
      <Compile Include="Assets\Scripts\ChangeScene.cs" />
      <Compile Include="Assets\Scripts\Clock.cs" />
+     <Compile Include="Assets\Scripts\EarnMoney.cs" />
      <Compile Include="Assets\Scripts\FishFunction.cs" />
      <Compile Include="Assets\Scripts\GameFunction.cs" />
      <Compile Include="Assets\Scripts\main_load.cs" />

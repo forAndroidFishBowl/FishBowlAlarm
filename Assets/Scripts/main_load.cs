@@ -10,12 +10,13 @@ public class User
     public bool fish2 { get; set; }
     public bool fish3 { get; set; }
     public bool fish4 { get; set; }
+    public bool fish5 { get; set; }
+
+    public int money { get; set; }
 
 }
 
 public class main_load : MonoBehaviour {
-
-    private JsonData jsonData;
 
 	// Use this for initialization
 	void Start () {

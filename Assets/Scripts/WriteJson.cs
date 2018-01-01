@@ -12,9 +12,7 @@ public class WriteJson : MonoBehaviour {
     {
         jsonString = File.ReadAllText(Application.dataPath + "/Resource/Status.json");
         jsonData = JsonMapper.ToObject(jsonString);
-
-
-
+        
         File.WriteAllText(Application.dataPath + "/Resource/Status.json", jsonString);
 
     }

@@ -18,15 +18,23 @@ public class BuyFish01 : MonoBehaviour {
         {
             case "Fish1":
                 user.fish1 = true;
+                user.money -= 100;
                 break;
             case "Fish2":
                 user.fish2 = true;
+                user.money -= 200;
                 break;
             case "Fish3":
                 user.fish3 = true;
+                user.money -= 300;
                 break;
             case "Fish4":
                 user.fish4 = true;
+                user.money -= 400;
+                break;
+            case "Fish5":
+                user.fish5 = true;
+                user.money -= 500;
                 break;
             default:
                 break;
