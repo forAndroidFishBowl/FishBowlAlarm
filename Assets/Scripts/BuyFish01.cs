@@ -7,25 +7,33 @@ using LitJson;
 public class BuyFish01 : MonoBehaviour {
 
     private JsonData jsonData;
+    private string jsonString;
+    private User user = new User();
 
     public void BuyFish1(string fishName)
     {
-        jsonData = JsonMapper.ToObject(File.ReadAllText(Application.dataPath + "/Resource/Status.json"));
+        user = JsonMapper.ToObject<User>(File.ReadAllText(Application.dataPath + "/Resource/Status.json"));
 
         switch (fishName)
         {
             case "Fish1":
-                jsonData["fish"][0]["enable"] = true;
+                user.fish1 = true;
                 break;
             case "Fish2":
-                jsonData["fish"][1]["enable"] = true;
+                user.fish2 = true;
                 break;
             case "Fish3":
-                jsonData["fish"][2]["enable"] = true;
+                user.fish3 = true;
                 break;
-
+            case "Fish4":
+                user.fish4 = true;
+                break;
+            default:
+                break;
         }
 
+        jsonString = JsonMapper.ToJson(user);
+        File.WriteAllText(Application.dataPath + "/Resource/Status.json", jsonString);
         
     }
 
