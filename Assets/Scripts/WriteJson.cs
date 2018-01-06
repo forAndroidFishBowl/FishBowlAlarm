@@ -10,10 +10,10 @@ public class WriteJson : MonoBehaviour {
 
     void Start()
     {
-        jsonString = File.ReadAllText(Application.dataPath + "/Resource/Status.json");
+        jsonString = File.ReadAllText(Application.dataPath + "/Status.json");
         jsonData = JsonMapper.ToObject(jsonString);
         
-        File.WriteAllText(Application.dataPath + "/Resource/Status.json", jsonString);
+        File.WriteAllText(Application.dataPath + "/Status.json", jsonString);
 
     }
 }

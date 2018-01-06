@@ -12,7 +12,7 @@ public class BuyFish01 : MonoBehaviour {
 
     public void BuyFish1(string fishName)
     {
-        user = JsonMapper.ToObject<User>(File.ReadAllText(Application.dataPath + "/Resource/Status.json"));
+        user = JsonMapper.ToObject<User>(File.ReadAllText(Application.persistentDataPath + "/Status.json"));
 
         switch (fishName)
         {
@@ -41,7 +41,7 @@ public class BuyFish01 : MonoBehaviour {
         }
 
         jsonString = JsonMapper.ToJson(user);
-        File.WriteAllText(Application.dataPath + "/Resource/Status.json", jsonString);
+        File.WriteAllText(Application.persistentDataPath + "/Status.json", jsonString);
         
     }
 

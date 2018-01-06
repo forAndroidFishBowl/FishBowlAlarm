@@ -10,10 +10,10 @@ public class EarnMoney : MonoBehaviour {
 
     public void gainMoney()
     {
-        user = JsonMapper.ToObject<User>(File.ReadAllText(Application.dataPath + "/Resource/Status.json"));
+        user = JsonMapper.ToObject<User>(File.ReadAllText(Application.persistentDataPath + "/Status.json"));
         user.money++;
         string jsonString = JsonMapper.ToJson(user);
-        File.WriteAllText(Application.dataPath + "/Resource/Status.json", jsonString);
+        File.WriteAllText(Application.persistentDataPath + "/Status.json", jsonString);
     }
 
 }
