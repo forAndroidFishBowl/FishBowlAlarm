@@ -13,7 +13,7 @@ public class resetfish : MonoBehaviour {
         if (File.Exists(path))
         {
             //檔案存在
-            string init = "{\"fish1\":false,\"fish2\":false,\"fish3\":false,\"fish4\":false,\"fish5\":false,\"money\":89514}";
+            string init = "{\"fish1\":false,\"fish2\":false,\"fish3\":false,\"fish4\":false,\"fish5\":false,\"money\":89514,\"achievement1\": false,\"achievement2\": false,\"achievement3\":false,\"achievement4\": false,\"moneycost\":0}";
             File.WriteAllText(path, init);
         }
         else
@@ -21,7 +21,7 @@ public class resetfish : MonoBehaviour {
             //檔案不存在
             FileStream Status = File.Create(@path);
             Status.Close();
-            string init = "{\"fish1\":false,\"fish2\":false,\"fish3\":false,\"fish4\":false,\"fish5\":false,\"money\":89514}";
+            string init = "{\"fish1\":false,\"fish2\":false,\"fish3\":false,\"fish4\":false,\"fish5\":false,\"money\":89514,\"achievement1\": false,\"achievement2\": false,\"achievement3\":false,\"achievement4\": false,\"moneycost\":0}";
             File.WriteAllText(path, init);
         }
     }

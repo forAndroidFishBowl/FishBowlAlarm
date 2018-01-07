@@ -14,6 +14,13 @@ public class User
 
     public int money { get; set; }
 
+    public bool achievement1 { get; set; }
+    public bool achievement2 { get; set; }
+    public bool achievement3 { get; set; }
+    public bool achievement4 { get; set; }
+
+    public int  moneycost { get; set; }
+
 }
 
 public class main_load : MonoBehaviour {
@@ -34,7 +41,7 @@ public class main_load : MonoBehaviour {
             FileStream Status = File.Create(@path);
             Status.Close();
             User init_user = new User();
-            string init = "{\"fish1\":false,\"fish2\":false,\"fish3\":false,\"fish4\":false,\"fish5\":false,\"money\":89514}";
+            string init = "{\"fish1\":false,\"fish2\":false,\"fish3\":false,\"fish4\":false,\"fish5\":false,\"money\":89514,\"achievement1\": false,\"achievement2\": false,\"achievement3\":false,\"achievement4\": false,\"moneycost\":0}";
 
             File.WriteAllText(path, init);
             //jsonString = JsonMapper.ToJson(init_user);
@@ -56,7 +63,7 @@ public class main_load : MonoBehaviour {
         Debug.Log(user.fish3);
         fish04.GetComponent<Renderer>().enabled = user.fish4;
         Debug.Log(user.fish4);
-        fish05.GetComponent<Renderer>().enabled = user.fish4;
+        fish05.GetComponent<Renderer>().enabled = user.fish5;
         Debug.Log(user.fish5);
     }
 	

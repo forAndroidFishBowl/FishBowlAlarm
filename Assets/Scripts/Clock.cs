@@ -14,6 +14,7 @@ public class Clock : MonoBehaviour {
     public string saveTimeMinute;
     public string inputHour;
     public string inputMinute;
+    private string jsonString;
 
     private void OnGUI()
     {
@@ -44,6 +45,10 @@ public class Clock : MonoBehaviour {
         {
             saveTimeHour = inputHour;
             saveTimeMinute = inputMinute;
+            user.achievement3 = true;
+            jsonString = JsonMapper.ToJson(user);
+            File.WriteAllText(Application.persistentDataPath + "/Status.json", jsonString);
+
         }
     }
 
